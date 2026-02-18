@@ -36,7 +36,7 @@ async def app_lifespan(server: FastMCP):
     yield
 
 
-mcp = FastMCP("mcp-vision", lifespan=app_lifespan, transport="http", host="0.0.0.0", port=8000)
+mcp = FastMCP("mcp-vision", lifespan=app_lifespan)
 
 
 def load_hf_objdet_pipeline(model_name: str):
@@ -144,3 +144,6 @@ def zoom_to_object(
     crop = image.crop((left, top, right, bottom))
 
     return to_mcp_image(crop)
+
+if __name__ == "__main__":
+    mcp.run(transport="http", host="0.0.0.0", port=8081)
