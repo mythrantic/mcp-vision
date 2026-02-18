@@ -1,3 +1,10 @@
+# mcp-vision
+
+A Model Context Protocol (MCP) server exposing HuggingFace computer vision models such as zero-shot object detection as tools, enhancing the vision capabilities of large language or vision-language models. Allow VLMs to call dedicated specialist CV models
+
+This repo is in active development. See below for details of currently available tools.
+
+
 <p align="center">
 <img src="images/image0_and_claude_zoomed_in.png">
 </p>
@@ -12,11 +19,6 @@
   </a>
 </p>
 
-# mcp-vision by <img src="images/gl_logo.png" height=25>
-
-A Model Context Protocol (MCP) server exposing HuggingFace computer vision models such as zero-shot object detection as tools, enhancing the vision capabilities of large language or vision-language models.
-
-This repo is in active development. See below for details of currently available tools.
 
 ## Installation
 
