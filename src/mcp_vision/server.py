@@ -86,7 +86,7 @@ def init_objdet_pipeline(hf_model: str | None = None) -> None:
     objdet_model_name = objdet_config.get("model_name", None)
     objdet_model = objdet_config.get("model", None)
 
-    if not objdet_model_name or not objdet_model or objdet_model_name != hf_model:
+    if not objdet_model_name or not objdet_model or objdet_model_name != hf_model:host="0.0.0.0", port=8000
         print(
             f"No object detection model exists for {hf_model=} (existing {objdet_model_name=}), reloading"
         )
@@ -146,4 +146,4 @@ def zoom_to_object(
     return to_mcp_image(crop)
 
 if __name__ == "__main__":
-    mcp.run(transport="http", host="0.0.0.0", port=8081)
+    mcp.run(transport="http", host="0.0.0.0", port=8000)
