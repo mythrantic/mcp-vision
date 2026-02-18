@@ -144,6 +144,3 @@ def zoom_to_object(
     crop = image.crop((left, top, right, bottom))
 
     return to_mcp_image(crop)
-
-if __name__ == "__main__":
-    mcp.run(transport="http", host="0.0.0.0", port=8000)
