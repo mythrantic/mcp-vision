@@ -36,7 +36,7 @@ async def app_lifespan(server: FastMCP):
     yield
 
 
-mcp = FastMCP("mcp-vision", lifespan=app_lifespan, host="0.0.0.0", port=8000)
+mcp = FastMCP("mcp-vision", lifespan=app_lifespan, transport="http", host="0.0.0.0", port=8000)
 
 
 def load_hf_objdet_pipeline(model_name: str):
