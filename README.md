@@ -139,6 +139,7 @@ If Claude Desktop is failing to connect to `mcp-vision`:
 - Check the configuration is correct (CPU vs GPU)
 - Developer options may need to be enabled in Claude Desktop
 - Depending on the size of the model(s) used, give it a few minutes to download them from HuggingFace on first opening Claude Desktop. Once downloaded, the server will respond and Claude will connect.
+- If you see an error like `'websockets-sansio'`, make sure you have `uvicorn>=0.35.0` installed. This is now included in the dependencies by default.
 
 On accounts that have web search enabled, Claude will prefer to use web search over local MCP tools AFAIK. Disable web search for best results. 
 

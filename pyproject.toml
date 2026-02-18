@@ -13,6 +13,7 @@ dependencies = [
     "scipy>=1.15.2",
     "torch>=2.7.0",
     "transformers>=4.51.3",
+    "uvicorn>=0.35.0",
 ]
 
 [project.optional-dependencies]
@@ -25,5 +26,5 @@ mcp-vision = "mcp_vision:main"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.uv]
-dev-dependencies = ["ruff>=0.7.3", "pytest>=8.0.0"]
+[dependency-groups]
+dev = ["ruff>=0.7.3", "pytest>=8.0.0"]
