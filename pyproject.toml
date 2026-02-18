@@ -1,0 +1,29 @@
+[project]
+name = "mcp-vision"
+version = "0.1.1"
+description = "Allow VLMs to call dedicated specialist CV models."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Groundlight AI" },{ name = "Mythrantic" }]
+license = { text = "MIT License" }
+dependencies = [
+    "fastmcp>=2.13.0.2",
+    "mcp>=1.20.0",
+    "pillow>=11.2.1",
+    "scipy>=1.15.2",
+    "torch>=2.7.0",
+    "transformers>=4.51.3",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.7.3", "pytest>=8.0.0"]
+
+[project.scripts]
+mcp-vision = "mcp_vision:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["ruff>=0.7.3", "pytest>=8.0.0"]
